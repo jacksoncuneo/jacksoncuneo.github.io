@@ -13,8 +13,7 @@ background: -moz-linear-gradient(-45deg, #ebf1f6 0%, #abd3ee 39%, #89c3eb 64%, #
 background: -webkit-linear-gradient(-45deg, #ebf1f6 0%,#abd3ee 39%,#89c3eb 64%,#89c3eb 64%,#d5ebfb 95%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(135deg, #ebf1f6 0%,#abd3ee 39%,#89c3eb 64%,#89c3eb 64%,#d5ebfb 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 300px;
-  height: 150px;
+
   border-radius: 20px;
 
 }
@@ -41,12 +40,14 @@ header {
 
 nav {
   background-color: lightblue;
-  height: 50px;
+  z-index: 10px;
+  height: 200px;
 }
 
 main {
   background-color: white;
   width: 960px;
+  z-index: 0px;
 }
 
 footer {
@@ -67,4 +68,101 @@ section {
   min-height: 400px;
   float: left;
   position: relative;
+}
+img{
+  width: 600px;
+}
+@media (max-width: 767px){
+  #wrapper {
+      max-width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+  section{
+    float: none;
+    width: 100%;
+  }
+
+}
+
+  img{
+    max-width: 100%;
+    height: auto;
+    display:block;
+  }
+
+
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li{
+  font-family: Helvetica, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  border-bottom: 3px solid #888;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
+  display:block;
+  transition: .5s background-color;
+    border-bottom: 3px solid #888;
+}
+
+nav a:hover {
+  background-color: lime;
+}
+
+nav a.active{
+  background-color: violet;
+  cursor: default;
+}
+
+
+nav li li {
+  font-size: 1rem;
+  text-align:left;
+}
+
+nav li li a {
+  padding-left: 10px;
+}
+
+@media (min-width: 768px){
+
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    border-bottom: none;
+    width: 120px;
+  }
+  nav li ul{
+    position:absolute;
+    display: none;
+    opacity: 0;
+    transition: .5s opacity;
+  }
+  nav a{
+    border-bottom: none;
+  }
+  nav li:hover ul{
+    display:block;
+    opacity:1;
+  }
+  nav li ul li{
+    display:block;
+  }
 }
