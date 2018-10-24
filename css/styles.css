@@ -44,59 +44,6 @@ nav {
   height: 200px;
 }
 
-main {
-  background-color: white;
-  width: 960px;
-  z-index: 0px;
-}
-
-footer {
-  background-color: var(--favorite, gray);
-  height: 100px;
-}
-
-aside {
-  background-color: blue;
-  width: 300px;
-  min-height: 400px;
-  float: left;
-}
-
-section {
-  background-color: thistle;
-  width: 660px;
-  min-height: 400px;
-  float: left;
-  position: relative;
-}
-img{
-  width: 600px;
-}
-@media (max-width: 767px){
-  #wrapper {
-      max-width: 100%;
-  }
-  main {
-    width: 100%;
-  }
-  aside {
-    float: none;
-    width: 100%;
-  }
-  section{
-    float: none;
-    width: 100%;
-  }
-
-}
-
-  img{
-    max-width: 100%;
-    height: auto;
-    display:block;
-  }
-
-
 nav ul {
   list-style: none;
   background-color: #444;
@@ -106,10 +53,9 @@ nav ul {
 }
 
 nav li{
-  font-family: Helvetica, sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  border-bottom: 3px solid #888;
 }
 
 nav a{
@@ -139,10 +85,87 @@ nav li li a {
   padding-left: 10px;
 }
 
+main {
+  background-color: white;
+  width: 960px;
+  z-index: 0px;
+}
+
+footer {
+  background-color: var(--favorite, gray);
+  height: 100px;
+}
+
+aside {
+  background-color: blue;
+  width: 300px;
+  min-height: 400px;
+  float: left;
+}
+
+section {
+  background-color: thistle;
+  width: 660px;
+  min-height: 400px;
+  float: left;
+  position: relative;
+}
+img{
+  width: 600px;
+}
+
+.myflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.myflex .gradient-box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  flex-basis: 120px;
+}
+
+
+@media (max-width: 767px){
+  #wrapper {
+      max-width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+  section{
+    float: none;
+    width: 100%;
+  }
+nav{
+  height: 280px;
+}
+}
+
+  img{
+    max-width: 100%;
+    height: auto;
+    display:block;
+  }
+
+
+
+
 @media (min-width: 768px){
 
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
   nav li {
-    display: inline-block;
+    /* display: inline-block; */
     margin-right: -4px;
     font-size: 1.5rem;
     line-height: 2.25rem;
